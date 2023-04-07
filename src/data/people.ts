@@ -1,13 +1,6 @@
-interface Person {
-  id: string;
-  name: string;
-  category: string;
-  "category-image": string;
-  company: string;
-  "company-image": string;
-  levelOfHappiness: string;
-}
+import { Person } from "@/models";
 
+ 
 export const People: Person[] = [
   {
     id: "1",
