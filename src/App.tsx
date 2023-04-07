@@ -1,17 +1,20 @@
-import { CssBaseline } from "@mui/material";
+import { Provider } from "react-redux";
+import "./App.css";
 import { Navbar } from "./components";
 import { Home } from "./pages";
-import "./App.css";
+import { store } from "./redux/store";
 import { LayoutContainer } from "./styled-components";
 
 function App() {
   return (
     <>
       {/* <CssBaseline /> */}
-      <Navbar />
-      <LayoutContainer>
-        <Home />
-      </LayoutContainer>
+      <Provider store={store}>
+        <Navbar />
+        <LayoutContainer>
+          <Home />
+        </LayoutContainer>
+      </Provider>
     </>
   );
 }
